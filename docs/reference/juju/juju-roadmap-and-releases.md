@@ -25,15 +25,34 @@ $ go run version/helper/main.go
 ADD WHEN FIXED.
 -->
 
+<!--TEMPLATE (>= 3.6.7)
+### 🔸 **Juju 3.6.X**
+🗓️ <DATE>  <--leave this as TBC until released into stable!
 
-<!--TEMPLATE
-### 🔸 **Juju 2.9.X**  - <DATE>  <--leave this as TBC until released into stable!
+⚙️ Features:
+* feat(secrets): handle NotFound errors in secret backend during `RemoveUserSecrets` by @ca-scribner in [#19169](https://github.com/juju/juju/pull/19169)
+* feat: open firewall ports for SSH server  proxy by @kian99 in [#19180](https://github.com/juju/juju/pull/19180)
 
 🛠️ Fixes:
+* fix: data race in state pool by @SimonRichardson in https://github.com/juju/juju/pull/19816
+* fix: associate DNS config with interfaces as appropriate by @manadart in https://github.com/juju/juju/pull/19890
 
-- Juju 3.2 doesn't accept token login[(LP203943)](https://bugs.launchpad.net/bugs/2030943)
+🥳 New Contributors:
+* @nsklikas made their first contribution in https://github.com/juju/juju/pull/19821
+-->
 
-See the full list in the [milestone page](https://launchpad.net/juju/+milestone/2.9.X).
+<!--LEGACY TEMPLATE (< 3.6.7)
+### 🔸 **Juju 2.9.X**  - <DATE>  <--leave this as TBC until released into stable!
+⚙️ Features:
+* feat(secrets): handle NotFound errors in secret backend during `RemoveUserSecrets` by @ca-scribner in [#19169](https://github.com/juju/juju/pull/19169)
+* feat: open firewall ports for SSH server  proxy by @kian99 in [#19180](https://github.com/juju/juju/pull/19180)
+
+🛠️ Fixes:
+* fix: data race in state pool by @SimonRichardson in https://github.com/juju/juju/pull/19816
+* fix: associate DNS config with interfaces as appropriate by @manadart in https://github.com/juju/juju/pull/19890
+
+🥳 New Contributors:
+* @nsklikas made their first contribution in https://github.com/juju/juju/pull/19821
 -->
 
 
@@ -46,6 +65,40 @@ See the full list in the [milestone page](https://launchpad.net/juju/+milestone/
 ```{note}
 Juju 3.6 series is LTS
 ```
+
+### 🔸 **Juju 3.6.7**
+🗓️ 09 June 2025
+
+🛠️ Fixes:
+* fix: use pebble v1.19.1 by @jameinel in https://github.com/juju/juju/pull/19791
+* fix: data race in state pool by @SimonRichardson in https://github.com/juju/juju/pull/19816
+* fix: charm-user path in docs by @nsklikas in https://github.com/juju/juju/pull/19821
+* fix: slice access without guard causes panic by @SimonRichardson in https://github.com/juju/juju/pull/19820
+* fix: associate DNS config with interfaces as appropriate by @manadart in https://github.com/juju/juju/pull/19890
+
+🥳 New Contributors:
+* @nsklikas made their first contribution in https://github.com/juju/juju/pull/19821
+
+### 🔸 **Juju 3.6.6** - 29 May 2025
+⚙️ Features:
+* feat(secrets): handle NotFound errors in secret backend during `RemoveUserSecrets` by @ca-scribner in [#19169](https://github.com/juju/juju/pull/19169)
+* feat: open firewall ports for SSH server  proxy by @kian99 in [#19180](https://github.com/juju/juju/pull/19180)
+* feat(ssh): public key authentication for ssh server by @SimoneDutto in [#18974](https://github.com/juju/juju/pull/18974)
+* feat: sshtunneler package by @kian99 in [#19285](https://github.com/juju/juju/pull/19285)
+* feat: transaction op logging by @manadart in [#19762](https://github.com/juju/juju/pull/19762)
+
+🛠️ Fixes:
+* fix: always create K8s unit virtual host key by @kian99 in [#19503](https://github.com/juju/juju/pull/19503)
+* fix: model defaults validation by @manadart in [#19462](https://github.com/juju/juju/pull/19462)
+* fix: detailed health errors for probe by @jameinel in [#19670](https://github.com/juju/juju/pull/19670)
+* fix: broken enable-ha on azure due to a panic caused by a nil pointer  by @wallyworld in [#19695](https://github.com/juju/juju/pull/19695)
+* fix: ssh-tunneler worker failure on k8s provider by @kian99 in [#19729](https://github.com/juju/juju/pull/19729)
+* fix: warn on dropped error by @MggMuggins in [#19532](https://github.com/juju/juju/pull/19532)
+
+🥳 New Contributors:
+* @matthew-hagemann made their first contribution in [#19436](https://github.com/juju/juju/pull/19436)
+* @abbiesims made their first contribution in [#19575](https://github.com/juju/juju/pull/19575)
+* @MggMuggins made their first contribution in [#19532](https://github.com/juju/juju/pull/19532)
 
 ### 🔸 **Juju 3.6.5** - 14 April 2025
 ⚙️ Features:
@@ -1181,7 +1234,7 @@ See the full list in the [milestone page](https://launchpad.net/juju/+milestone/
 
 ### 🔸 **Juju 2.9.17** - 27 Oct 2021
 
-This release introduces [telemetry](https://discourse.charmhub.io/t/telemetry-and-juju/5188) as a configurable option per model.
+This release introduces {ref}`telemetry` as a configurable option per model.
 It also supports [more OCI image registry providers](https://discourse.charmhub.io/t/initial-private-registry-support/5079) for pulling images used for CAAS models.
 
 🛠️ Fixes:

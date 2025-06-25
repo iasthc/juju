@@ -13,7 +13,7 @@ import (
 	"time"
 
 	charmresource "github.com/juju/charm/v12/resource"
-	"github.com/juju/description/v8"
+	"github.com/juju/description/v9"
 	"github.com/juju/errors"
 	"github.com/juju/names/v5"
 	jujutesting "github.com/juju/testing"
@@ -95,6 +95,7 @@ func (s *ClientSuite) TestMigrationStatus(c *gc.C) {
 					AuthTag:       names.NewUserTag("admin").String(),
 					Password:      "secret",
 					Macaroons:     string(macsJSON),
+					Token:         "token",
 				},
 			},
 			MigrationId:      "id",
@@ -122,6 +123,7 @@ func (s *ClientSuite) TestMigrationStatus(c *gc.C) {
 			CACert:        "cert",
 			AuthTag:       names.NewUserTag("admin"),
 			Password:      "secret",
+			Token:         "token",
 		},
 	})
 }
